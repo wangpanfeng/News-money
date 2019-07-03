@@ -1,7 +1,7 @@
 import os
 import time
 
-count=1
+count=0
 def get():
     print("正在刷新...")
     os.system('adb shell input tap 105 1890')
@@ -22,10 +22,12 @@ def get():
 print("无限循环 or 循环n次？[1|2]")
 a = input("请输入1或2：")
 
+
 if a == '1':
     print("----无限循环模式启动----")
     while 1:
         get()
+        count += 1
 elif a == '2':
     n = input("请输入遍数：")
     print("----循环",n,"遍----")
