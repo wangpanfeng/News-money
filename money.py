@@ -9,6 +9,7 @@ def a():
 
     print("点开第",count,"条新闻")
     os.system('adb shell input tap 300 600')
+    time.sleep(1)
 
     for i in range(1, 30):
         print("阅读中，剩余", 30 - i, "秒")
