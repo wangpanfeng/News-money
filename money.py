@@ -31,4 +31,3 @@ elif a == '2':
     print("----循环",n,"遍----")
     for count in range(0, int(n)):
         get()
-
