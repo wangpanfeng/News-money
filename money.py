@@ -14,7 +14,12 @@ def get():
 
     for i in range(1, 30):
         print("阅读中，剩余", 30 - i, "秒")
-        os.system('adb shell input swipe 560 1000 550 426')
+        # os.system('adb shell input swipe 560 1000 550 426')
+        startX = random.randint(460, 660)
+        startY = random.randint(900, 1100)
+        endX = random.randint(450, 550)
+        endY = random.randint(326, 526)
+        os.system("adb shell input swipe " + str(startX) + ' ' + str(startY) + ' ' + str(endX) + ' ' + str(endY))
 
     print("返回主页面")
     os.system('adb shell input tap 51 130')
