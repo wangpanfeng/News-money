@@ -5,7 +5,7 @@ count=0
 def get():
     print("正在刷新...")
     os.system('adb shell input tap 105 1890')
-    time.sleep(0.5)
+    time.sleep(1)
     print("刷新成功")
 
     print("点开第",count+1,"条新闻")

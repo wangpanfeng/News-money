@@ -1,6 +1,6 @@
 # mumu模拟器专版
 
-# 请调整模拟器分辨率：长1920 宽1080
+# 请调整模拟器分辨率：长1920 宽1080 dpi 320
 
 import os
 import time
@@ -8,16 +8,16 @@ import time
 count=0
 def get():
     print("正在刷新...")
-    os.system('adb shell input tap 105 1890')
-    time.sleep(0.5)
+    os.system('adb shell input tap 105 1877')
+    time.sleep(1)
     print("刷新成功")
 
     print("点开第",count+1,"条新闻")
     os.system('adb shell input tap 300 600')
-    time.sleep(1)
-
-    for i in range(1, 30):
-        print("阅读中，剩余", 30 - i, "秒")
+    time.sleep(2)
+    maxtime = 20
+    for i in range(1, maxtime):
+        print("阅读中，剩余", maxtime - i, "秒")
         os.system('adb shell input swipe 560 1000 550 426')
 
     print("返回主页面")
