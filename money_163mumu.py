@@ -23,11 +23,10 @@ def get():
     print("返回主页面")
     os.system('adb shell input tap 51 130')
 
-    # 时段奖励（45分钟1次）
-    if((count%90)==0):
-        os.system('adb shell input tap 966 132')
-        time.sleep(0.5)
-        os.system('adb shell input tap 909 518')
+    # 时段奖励（随机时间出现）
+    os.system('adb shell input tap 966 132')
+    time.sleep(0.5)
+    os.system('adb shell input tap 909 518')
 
 
 print("无限循环 or 循环n次？[1|2]")
