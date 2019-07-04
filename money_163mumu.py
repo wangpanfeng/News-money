@@ -8,8 +8,8 @@ import time
 count=0
 def get():
     print("正在刷新...")
-    os.system('adb shell input tap 105 1877')
-    time.sleep(1)
+    os.system('adb shell input tap 113 1877')
+    time.sleep(2)
     print("刷新成功")
 
     print("点开第",count+1,"条新闻")
@@ -23,10 +23,11 @@ def get():
     print("返回主页面")
     os.system('adb shell input tap 51 130')
 
-    # 时段奖励（随机时间出现）
-    os.system('adb shell input tap 966 132')
-    time.sleep(0.5)
-    os.system('adb shell input tap 909 518')
+    # 时段奖励（1小时1次）
+    if ((count % 120) == 0):
+        os.system('adb shell input tap 991 84')
+        time.sleep(0.5)
+        os.system('adb shell input tap 991 84')
 
 
 print("无限循环 or 循环n次？[1|2]")
