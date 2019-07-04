@@ -7,5 +7,7 @@
 
 **money_163mumu.py**是网易mumu模拟器的专用版本
 
+### 下载方法
+
 ![](https://github.com/sh06y/Eastday-money/blob/master/%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95.png?raw=true)
 公众号：路人甲实验室
